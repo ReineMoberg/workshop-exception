@@ -6,6 +6,7 @@ import java.util.List;
 
 import se.lexicon.exceptions.workshop.data_access.NameService;
 import se.lexicon.exceptions.workshop.domain.Person;
+import se.lexicon.exceptions.workshop.exceptions.DuplicateNameException;
 import se.lexicon.exceptions.workshop.fileIO.CSVReader_Writer;
 
 public class Main {
@@ -29,6 +30,23 @@ public class Main {
         Person test = nameService.getNewRandomPerson();
         System.out.println(test);
 
-	}
+       /* try {
+            nameService.addMaleFirstName("Liam");
+        } catch (DuplicateNameException e) {
+            System.out.println(e.getMessage());
+        }*/
+
+        /*try{
+            nameService.addFemaleFirstName("Ester");
+        } catch (DuplicateNameException e) {
+            System.out.println(e.getMessage());
+        }*/
+
+        /*try{
+            nameService.addFemaleFirstName("Linda");
+        } catch (DuplicateNameException e) {
+            System.out.println(e.getMessage());
+        }*/
+    }
 
 }
